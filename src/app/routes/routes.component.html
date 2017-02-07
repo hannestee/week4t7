@@ -1,0 +1,16 @@
+<h1>Routes through stop {{ this.digitransitService.getStop() }}</h1>
+
+<p>Set <span style="color: blue" (click)="setFavourite(this.digitransitService.getStop())">{{ this.digitransitService.getStop() }}</span> as a favourite stop</p>
+
+<ul>
+  <li *ngFor="let route of routes">
+    <span (click)="showBus(route.route.gtfsId)">{{ route.name }}</span>
+  </li>
+</ul>
+
+<p>Welcome {{user.firstname}} {{user.lastname}}</p>
+
+<p>{{user.city}}</p>
+<p>{{user.zip}} </p>
+<p>{{user.address}}</p>
+<p>{{user.gsm}} </p>

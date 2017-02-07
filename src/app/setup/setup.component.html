@@ -1,0 +1,43 @@
+
+
+
+<form #form="ngForm" (ngSubmit)="logForm(form.value)">
+  <label>
+    Enter bus stop number or name
+    <input type="text" name="stop" [(ngModel)]="stop">
+  </label>
+
+  <p>Favourite stop: {{favstop}}</p>
+
+  <br><br>
+  <label>Firstname:</label>
+  <input type="text" name="firstname" [(ngModel)]="firstname"> <br><br>
+
+  <label>Lastname:</label>
+  <input type="text" name="lastname" [(ngModel)]="lastname"> <br><br>
+
+  <label>City:</label>
+  <input type="text" name="city" [(ngModel)]="city"> <br><br>
+
+  <label>Zip:</label>
+  <input type="text" name="zip" [(ngModel)]="zip"> <br><br>
+
+  <label>Address:</label>
+  <input type="text" name="address" [(ngModel)]="address"> <br><br>
+
+  <label>Phonenumber:</label>
+  <input type="text" name="gsm" [(ngModel)]="gsm"> <br><br>
+
+  <button type="submit">Submit</button>
+</form>
+
+<button (click)="delForm()">Clear personal information</button>
+
+<hr>
+
+<p>{{firstname}}</p>
+<p>{{lastname}} </p>
+<p>{{city}}</p>
+<p>{{zip}} </p>
+<p>{{address}}</p>
+<p>{{gsm}} </p>
